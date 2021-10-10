@@ -4,21 +4,73 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 <title>메인샘플</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./resources/css/common.css">
+<link rel="stylesheet" href="./resources/css/layout.css">
+<link rel="stylesheet" href="./resources/css/main.css">
+<link rel="stylesheet" href="./resources/css/content.css">
+<script src="./resources/js/common.js"></script>
+
+<!-- 스와이퍼 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
 </head>
 <body>
     
     <div style="padding:50px;">
+        <h1>https://yl1017-yang.github.io/publish_common/</h1><br><br>
+
         <h2>인덱스 화면</h2>
+        <br>
         <h3>1. CSS</h3>
-        <p>- common.css</p>
+        <p>- common.css : 공통</p>
+        <p>- layout.css : 레이아웃</p>
+        <br>
+
         <h3>2. JS</h3>
+        <p>- common.js : 공통</p>
+        <br>
+
+        <h3>경로</h3>
+        <div>
+            <a href="./main.html">main : 메인화면</a><br>
+            <a href="./sub.html">sub : 서브화면</a>
+        </div>
+        <br>
+
+        <h3>폼 샘플</h3>
+        <div>
+
+        </div>
+        <br>
+
+        <h3>반응형 사이즈</h3>
+        <div style="word-break:keep-all;word-wrap:break-word;white-space:pre-line;padding:20px 30px;background:#eee;">
+            :root { font-size: 16px; }
+            @media all and (max-width: 1440px) { :root { font-size: 16px; } }
+            @media all and (max-width: 1280px) { :root { font-size: 12px; } }
+            @media all and (max-width: 800px) { :root { font-size: 9px; } }
+            @media all and (max-width: 375px) { :root { font-size: 9px; } }
+        </div>
+        <br>
+        <div style="word-break:keep-all;word-wrap:break-word;white-space:pre-line;padding:20px 30px;background:#eee;">
+            html{font-size:16px;}
+            body{min-width:1280px;min-height:100%;overflow-y:scroll;}
+
+            /* only mobile */
+            @media all and (max-width:768px) {
+                html{font-size:10px;}
+	            body{min-width:100%;font-size:1.6rem;}
+            }
+        </div>
     </div>
 
 </body>

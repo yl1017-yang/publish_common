@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/****************** Layout ******************/
+html{font-size:16px;}
+body{min-width:1280px;min-height:100%;overflow-y:scroll;}
+
+/****************** Header & GNB ******************/
+.header{}
+
+/* 1차메뉴 */
+.gnbArea{}
+
+/****************** Footer ******************/
+.footer{}
+
+
+/****************** media ******************/
+@media all and (min-width:770px) and (max-width:1298px) {
+
+}
+
+/* only pc */
+@media all and (min-width:769px) {
+}
+
+/* only mobile */
+@media all and (max-width:768px) {
+    html{font-size:10px;}
+	body{min-width:100%;font-size:1.6rem;}
+}
+
+@media all and (max-width:375px) {
+
+}
+
+@media all and (max-width:360px) {
+    
+}
+
+@media all and (max-width:320px) {
+
+}
