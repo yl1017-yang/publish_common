@@ -15,12 +15,12 @@ body{min-width:1280px;min-height:100%;overflow-y:scroll;}
 
 
 /****************** media ******************/
-@media all and (min-width:770px) and (max-width:1298px) {
+@media screen and (max-width: 1366px){
 
 }
 
-/* only pc */
-@media all and (min-width:769px) {
+@media screen and (max-width: 1024px){
+
 }
 
 /* only mobile */
