@@ -19,8 +19,7 @@ a{color:inherit;text-decoration:none;cursor:pointer}
 button{border:none;background:none;cursor:pointer}
 
 /* 아이폰(사파리) 터치 메뉴 활성화 관련 */
-a, button,
-[role=button], [role=link], [role=tab] {-webkit-touch-callout:none;}
+a, button, [role=button], [role=link], [role=tab] {-webkit-touch-callout:none;}
 
 /* form select */
 input[type='text'], input[type='password'] { box-sizing:border-box; -webkit-appearance:none; appearance:none; resize:none; box-shadow:none !important; outline:none; }

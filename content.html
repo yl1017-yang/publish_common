@@ -27,7 +27,7 @@
 
 <script type="text/javascript">
     $(function() {
-        gnbMenu(6,0,0); //초기번호 0
+        gnbMenu(0,1,1); //초기번호 0
     });
 </script>
 
@@ -83,21 +83,42 @@
         </div>
     </header>
     <!-- //상단 -->
+    
+    <div class="sub_visual">
+        <p>
+            서브 비주얼
+        </p>
+    </div>
+    
+    <!-- 서브 네비게이션 -->
+    <div class="location">    
+        <ul class="lnb" title="네비게이션 페이지">
+            <li class="home"><a href="./main.html">HOME</a></li>
+            <li class="lnbDep1 dep1">
+                <a href="#"></a>
+                <ul class="lnbDep2">
+                </ul>
+            </li>
+            <li class="lnbDep1 dep2">
+                <a href="#"></a>
+                <ul class="lnbDep2">
+                </ul>
+            </li>
+            <li class="lnbDep1 dep3">
+                <a href="#">메뉴33</a>
+                <ul class="lnbDep2">
+                    <li><a href="#">뎁스3-1</a></li>
+                    <li><a href="#">뎁스3-2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- //서브 네비게이션 -->
 
     <section>
-        섹션<br>
-        참고 https://www.shinhanlife.co.kr/hp/cdha0010.do
-
-        <div style="margin-top:150px;display:flex;justify-content:space-between;">
-            <div style="background-color: aqua;padding:20px;display:flex;">
-                배경
-            </div>
-            <div style="background-color:bisque;padding:20px;">
-                배경
-            </div>
-            <div style="background-color:brown;padding:20px;">
-                배경
-            </div>
+        <div class="inner">
+            섹션<br>
+            참고 https://www.shinhanlife.co.kr/hp/cdha0010.do
         </div>
     </section>
 
