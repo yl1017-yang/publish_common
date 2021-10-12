@@ -63,3 +63,69 @@ function gnbMenu(depth1, depth2, depth3) {
 	});
 
 }
+
+
+//swiper 메인비주얼
+$(function() {
+    var mainslider = new Swiper('.slider-main', {
+      speed: 1000,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      effect: "fade",
+      allowTouchMove : true,
+      slidesPerView: 1,
+    //   mousewheel: true,
+    //   keyboard: true,
+      
+    /* loop: true, */
+      
+      scrollbar: {
+        el: ".swiper-scrollbar", 
+      },    
+      
+      on: {
+        init: function () {
+          $(".swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+          $(".swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+        },
+        slideChangeTransitionStart: function () {
+          $(".swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+        },
+        slideChangeTransitionEnd: function () {
+          $(".swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+        }
+        
+      },
+  
+      pagination: {
+        el: '.swiper-pagination',      
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+        
+    }); 
+    
+    $(".swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+    
+    // swiper Play/Stop
+    $('.swiper-play-pause').on("click", function () {
+      var $this = $(this);
+      if ($this.hasClass('pause')) {
+          $this.removeClass('pause').addClass('play').text('Play');
+          mainslider.autoplay.start();
+          /* mainslider.slideNext(); */
+          $(".swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+          
+      } else {
+          $this.addClass('pause').removeClass('play').text('Pause');
+          mainslider.autoplay.stop();
+          $(".swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+      }
+    });  
+});
+  
