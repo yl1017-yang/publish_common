@@ -11,12 +11,12 @@ function gnbMenu(depth1, depth2, depth3) {
     //gnb
     $gnb.on('focusin mouseenter',function(){
         $(this).children().find('.gnbDep2').stop().slideDown('200');
-        $(this).parent().find(".gnbBg").stop().animate({ "height":"170px" }).addClass("on");        
+        $(this).parent().find(".gnbBg").stop().animate({ "height":"180px" });
     });
     
     $gnb.on('focusout mouseleave',function(){
         $(this).children('.gnbDep1').find('.gnbDep2').stop().slideUp('0');
-        $(this).parent().find(".gnbBg").stop().animate({ "height":"0" }).removeClass('on');
+        $(this).parent().find(".gnbBg").stop().animate({ "height":"0" });
     });
     
 	if ($gnbDep1.length > depth1) {
