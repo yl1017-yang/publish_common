@@ -115,12 +115,68 @@
     </div>
     <!-- //서브 네비게이션 -->
 
+    <!-- 내용 -->
     <section class="content">
         <div class="inner">
+
             섹션<br>
             참고 https://www.shinhanlife.co.kr/hp/cdha0010.do
+
+            <style>                
+                .event_coupon_wrap img{width:100%;vertical-align:top}
+                /* coupon */                
+                .evt_section .event_coupon_wrap{position:relative;width:100%;margin:0 auto;font-size:0}
+                .evt_section .input_radio_wrap{display:inline-block;position:relative;width:25%;height:100%;margin-bottom:7.500vw;font-size:0;}                
+                .evt_section .input_radio{position:absolute;top:2px;left:2px;width:16px;height:16px;background:#fff;opacity:0;}
+                .evt_section .input_radio+label{display:inline-block;position:relative;width:100%;font-size:14px;color:#000;text-align:center;cursor:pointer}
+                .evt_section .input_radio_wrap .text{display:block;font-size:25px;font-weight:600;color:#000;margin-top:15px;}
+                .evt_section .input_radio+label .text:after{display:inline-block;width:2.2vw;height:2.2vw;margin:0.1vw 0 0 1vw;background:url(https://s.pulmuone.app/MALL/planshop/202110/1025_weclome_gift/img/sp_radio.png) 0 0 no-repeat;background-size:100% auto;vertical-align:top;content:''}
+                .evt_section .input_radio:checked+label .text:after{background-position:0 100%}
+                .evt_section .input_radio:focus{-webkit-appearance:none;outline:none;outline-width:0}
+                .evt_section .input_radio:focus+label{position:relative;height:100%}
+                .evt_section .input_radio:focus+label:after{position:absolute;top:0;left:0;width:100%;height:89.445438%;border:5px solid #04ab00;-wekbit-border:5px solid #04ab00;box-sizing:border-box;content:'';-webkit-appearance:none;outline:none;outline-width:0}
+                /* .evt_section .input_radio:focus-within+label:after{background:red} */
+                .evt_section .is_soldout:after{position:absolute;top:0;right:0;left:0;bottom:0;background:url(https://s.pulmuone.app/MALL/planshop/202110/1025_weclome_gift/img/img_soldout.png) 0 50% no-repeat;background-size:100% auto;content:''}
+            </style>
+            <!-- 참여영역 -->
+            <div class="evt_section">
+            <div class="event_coupon_wrap">
+                <!-- [D] 품절 상품인 경우 input_radio_wrap 클래스에 is_soldout 클래스 추가 -->
+                <span class="input_radio_wrap">
+                  <input type="radio" id="lbl_radio1" class="input_radio" name="input_radio" />
+                  <label for="lbl_radio1">
+                    <img src="https://s.pulmuone.app/MALL/planshop/202110/1025_weclome_gift/img/items/m_item1.jpg" alt="" />
+                    <span class="text">선택하기</span>
+                  </label>
+                </span>
+                <span class="input_radio_wrap">
+                  <input type="radio" id="lbl_radio2" class="input_radio" name="input_radio" />
+                  <label for="lbl_radio2">
+                    <img src="https://s.pulmuone.app/MALL/planshop/202110/1025_weclome_gift/img/items/m_item2.jpg" alt="" />
+                    <span class="text">선택하기</span>
+                  </label>
+                </span>
+                <span class="input_radio_wrap">
+                  <input type="radio" id="lbl_radio3" class="input_radio" name="input_radio" />
+                  <label for="lbl_radio3">
+                    <img src="https://s.pulmuone.app/MALL/planshop/202110/1025_weclome_gift/img/items/m_item3.jpg" alt="" />
+                    <span class="text">선택하기</span>
+                  </label>
+                </span>
+                <span class="input_radio_wrap">
+                  <input type="radio" id="lbl_radio4" class="input_radio" name="input_radio" />
+                  <label for="lbl_radio4">
+                    <img src="https://s.pulmuone.app/MALL/planshop/202110/1025_weclome_gift/img/items/m_item4.jpg" alt="" />
+                    <span class="text">선택하기</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+              <!-- //참여영역 -->
+
         </div>
     </section>
+    <!-- //내용 -->
 
     <footer>
         하단
