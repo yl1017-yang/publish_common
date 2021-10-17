@@ -27,61 +27,16 @@
 
 <script type="text/javascript">
     $(function() {
-        gnbMenu(6,0,0); //초기번호 0
+        $("#header_wrap").load("./include/header.html", function () {
+            gnbMenu(6,0,0); //초기번호 0
+        });
+        $("#footer_wrap").load("./include/footer.html");
     });
 </script>
 
 <div class="wrap">
     <!-- 상단 -->
-    <header class="header fixed">
-        <div class="inner">
-            <h1 class="logo">
-                <a href="./main.html">YANG</a>
-            </h1>
-            <ul class="gnb">
-                <li class="gnbDep1">
-                    <a href="#">1차메뉴</a>
-                    <ul class="gnbDep2">
-                        <li><a href="./content.html">메뉴1-1(링크)</a></li>
-                        <li><a href="#">메뉴1-2</a></li>
-                    </ul>
-                </li>
-                <li class="gnbDep1">
-                    <a href="#">2차메뉴</a>
-                    <ul class="gnbDep2">
-                        <li><a href="./content.html">메뉴2-1(링크)</a></li>
-                        <li><a href="#">메뉴2-2</a></li>
-                        <li><a href="#">메뉴2-3</a></li>
-                        <li><a href="#">메뉴2-4</a></li>
-                    </ul>
-                </li>
-                <li class="gnbDep1">
-                    <a href="#">3차메뉴</a>
-                    <ul class="gnbDep2">
-                        <li><a href="#">메뉴3-1</a></li>
-                        <li><a href="#">메뉴3-2</a></li>
-                        <li><a href="#">메뉴3-3</a></li>
-                    </ul>
-                </li>
-                <li class="gnbDep1">
-                    <a href="#">4차메뉴</a>
-                    <ul class="gnbDep2">
-                        <li><a href="#">메뉴4-1</a></li>
-                        <li><a href="#">메뉴4-2</a></li>
-                        <li><a href="#">메뉴4-3</a></li>
-                        <li><a href="#">메뉴4-4</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="gnbBg"></div>
-            <div class="util">
-                <ul>
-                    <li><a href="#">검색</a></li>
-                    <li><a href="#">메뉴</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <div id="header_wrap"></div>
     <!-- //상단 -->
 
     <!-- 메인비주얼 -->
@@ -136,9 +91,9 @@
         </div>
     </section>
 
-    <footer>
-        하단
-    </footer>
+    <!-- 하단 -->
+    <div id="footer_wrap"></div>
+    <!-- //하단 -->
 </div>
 
 </body>

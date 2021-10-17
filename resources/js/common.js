@@ -67,6 +67,7 @@ function gnbMenu(depth1, depth2, depth3) {
 
 }
 
+//전체 햄버거메뉴
 
 //swiper 메인비주얼
 $(function() {
@@ -131,3 +132,4 @@ $(function() {
       }
     });  
 });
+
