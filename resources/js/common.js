@@ -2,11 +2,11 @@
 function gnbMenu(depth1, depth2, depth3) {
 	var $gnb = $(".gnb"),
     	$gnbDep1 = $(".gnbDep1", $gnb),
-        $lnb = $(".lnb"),
+      $lnb = $(".lnb"),
     	$lnbDep = $(".lnbDep1", $lnb),
-        $lnbDep1 = $(".dep1 .lnbDep2", $lnb),
-        $lnbDep2 = $(".dep2 .lnbDep2", $lnb),
-        $lnbDep3 = $(".dep3 .lnbDep2", $lnb);
+      $lnbDep1 = $(".dep1 .lnbDep2", $lnb),
+      $lnbDep2 = $(".dep2 .lnbDep2", $lnb),
+      $lnbDep3 = $(".dep3 .lnbDep2", $lnb);
     
     //gnb
     $gnb.on('focusin mouseenter',function(){
@@ -19,10 +19,10 @@ function gnbMenu(depth1, depth2, depth3) {
         $(this).parent().find(".gnbBg").stop().animate({ "height":"0" });
     });
     
-	if ($gnbDep1.length > depth1) {
-        $gnbDep1.eq(depth1).find("> a").addClass("on");
-        $gnbDep1.eq(depth1).find(".gnbDep2 > li").eq(depth2).find("> a").addClass("on");
-	}
+    if ($gnbDep1.length > depth1) {
+          $gnbDep1.eq(depth1).find("> a").addClass("on");
+          $gnbDep1.eq(depth1).find(".gnbDep2 > li").eq(depth2).find("> a").addClass("on");
+    }
     
     //lnb
     $lnbDep.find("> a").on('click', function(e) {
@@ -52,7 +52,7 @@ function gnbMenu(depth1, depth2, depth3) {
     var $location = $(".location");
     var locationTop = $location.offset();
     
-	$(window).scroll(function() {
+	  $(window).scroll(function() {
         var scrollTopY = $(document).scrollTop();
         
         if ( scrollTopY > locationTop.top - 80 ) {
@@ -60,7 +60,7 @@ function gnbMenu(depth1, depth2, depth3) {
         } else {
             $location.removeClass("fixed").css("margin-top", "0");
         }
-	});
+	  });
 
 }
 
@@ -128,4 +128,21 @@ $(function() {
       }
     });  
 });
-  
+
+
+//include
+$(function() {
+  includeLayout();
+});
+
+function includeLayout() {
+var includeArea = $('[data-include]');
+var self, url;
+$.each(includeArea, function() {
+  self = $(this);
+  url = self.data("include");
+  self.load(url, function() {
+    self.removeAttr("data-include");
+  });
+});
+}
