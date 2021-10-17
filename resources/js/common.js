@@ -19,6 +19,7 @@ function gnbMenu(depth1, depth2, depth3) {
         $(this).parent().find(".gnbBg").stop().animate({ "height":"0" });
     });
     
+    //gnb-on 활성화
     if ($gnbDep1.length > depth1) {
           $gnbDep1.eq(depth1).find("> a").addClass("on");
           $gnbDep1.eq(depth1).find(".gnbDep2 > li").eq(depth2).find("> a").addClass("on");
@@ -33,13 +34,15 @@ function gnbMenu(depth1, depth2, depth3) {
         $(this).parent().siblings().find("> a").removeClass('on');
     });
     
-	if ($lnbDep.length > depth1) {
-		$lnbDep1.eq(depth1).find("> a").addClass("on");
-        $lnbDep2.eq(depth2).find("> a").addClass("on");
-        $(".dep2").find("> a").addClass("on");
-        $lnbDep3.eq(depth3).find("li a").addClass("on");
+    //lnb - on 활성화
+    if ($lnbDep.length > depth1) {
+      $lnbDep1.eq(depth1).find("> a").addClass("on");
+          $lnbDep2.eq(depth2).find("> a").addClass("on");
+          $(".dep2").find("> a").addClass("on");
+          $lnbDep3.eq(depth3).find("li a").addClass("on");
     }    
     
+    //lnb - gnb 2,3 메뉴 동일 사용
     $gnbDep1.eq(depth1).each(function(){
         $(".dep1 > a").append( $(this).find("> a").html() );
         $(".dep2 > a").append( $(this).find(".gnbDep2 > li").eq(depth2).find("> a").html() );
@@ -128,7 +131,3 @@ $(function() {
       }
     });  
 });
-
-
-//include
-
