@@ -11,15 +11,14 @@ body{min-width:1280px;min-height:100%;overflow-y:scroll;}
 .fixed{position:fixed !important;top:0;left:0;}
 
 /* 상단 */
-.nav-up{top:-70px !important;}
 .header{position:absolute;width:100%;height:80px;z-index:20;background:#fff;transition:top 0.2s ease-in-out;border-bottom:1px solid #eee;}
 .header div{display:flex;justify-content:space-between;}
 .header h1.logo{width:150px;padding-top:22px;font-size:28px;font-weight:700;}
 .gnb{display:flex;z-index:30;}
 .gnb .gnbDep1{position:relative;}
 .gnb .gnbDep1 > a{width:160px;height:80px;display:flex;align-items:center;justify-content:center;color:#000;font-size:19px;font-weight:bold;}
-.gnb .gnbDep1 > a:after{content:'';height:3px;position:absolute;left:0;right:0;top:77px;opacity:1;width:0;background-color:#fff;display:block;margin:0 auto;}
-.gnb .gnbDep1 > a:hover:after{width:70%;background-color:#666;transition:opacity 0.4s,width 0.4s;}
+.gnb .gnbDep1 > a:after{content:'';height:2px;position:absolute;left:0;right:0;top:78px;width:0;background-color:#fff;display:block;margin:0 auto;transition:opacity 0.4s,width 0.4s;}
+.gnb .gnbDep1 > a:hover:after{width:70%;background-color:#666;}
 .gnb .gnbDep1 > a:hover, .gnb .gnbDep1 > a.on{color:steelblue;}
 .gnb .gnbDep1 > a.on:after{width:70%;background-color:#666;}
 
@@ -28,10 +27,12 @@ body{min-width:1280px;min-height:100%;overflow-y:scroll;}
 .gnb .gnbDep2 li > a:hover,
 .gnb .gnbDep2 li > a.on{color:steelblue;text-decoration:underline;}
 .gnbBg{position:absolute;top:80px;left:0;width:100%;background:#fff;z-index:10px;box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);}
-.header .util{width:150px;}
-.header .util > ul{display:flex;margin-top:15px;}
-.header .util > ul a{display:flex;align-items:center;justify-content:center;border-radius:100%;width:50px;height:50px;transition: all 0.8s;}
-.header .util > ul li:not(:last-child){margin-right:10px;}
+.header .util{width:110px;}
+.header .util > div{position:relative;display:flex;align-items:center;justify-content:center;border-radius:100%;width:50px;height:50px;margin-top:10px;transition:all 0.8s;}
+
+/* 버튼-search */
+.spape_search{position:absolute;top:35%;right:10px;font-size:0.9em;display:inline-block;width:0.9em;height:0.9em;border:0.2em solid #444;border-radius:100em;box-sizing:content-box;}
+.spape_search:after{content:"";display:inline-block;position:absolute;width:0.5em;height:0.3em;right:-0.4em;bottom:-0.3em;border-width:0;background:#444;transform:rotate(45deg);border-radius:30%;}
 
 /* 서브 네비게이션 */
 .location{position:relative;z-index:10;background:#666;width:100%;}
@@ -47,6 +48,45 @@ body{min-width:1280px;min-height:100%;overflow-y:scroll;}
 .lnb .lnbDep2 li > a:hover,
 .lnb .lnbDep2 li > a.on{color:steelblue;font-weight:bold;text-decoration:underline;}
 .lnb .lnbDep2 li .gnbDep2{display:none;} /* 1차 셀렉트 2차 숨김 */
+
+/****************** all Menu ******************/
+/* 모바일 전체메뉴 */
+/* body.fixed{overflow:hidden;} 모바일 오픈시 스크롤바 삭제 */
+.moGnbBg{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:0;}
+
+.moGnbWrap{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:50;}
+.moGnbWrap .scroll{position:absolute;top:0;right:0;width:50%;min-height:100vh;background-color:rgba(255,255,255,1);box-shadow:0 -10px 10px rgb(0 0 0 / 10%);} /* right:애니메이션, width:전체화면 */
+.moGnbWrap h2{padding:30px;}
+
+.moGnbWrap .moGnb .depth1, .moGnbWrap .moGnb .depth2{display:none;}
+.moGnbWrap .moGnb > li > a{display:block;padding:20px 10px;font-size:18px;color:#000;font-weight:bold;border-top:1px solid #ddd;}
+.moGnbWrap .moGnb .depth1 > li > a{display:block;padding:10px 5px 10px 20px;font-size:15px;color:#555;}
+.moGnbWrap .moGnb .depth2 > li > a{display:block;padding:10px 5px 10px 30px;font-size:13px;color:#999;}
+
+/* on 효과 */
+.moGnbWrap .moGnb li{position:relative;}
+.moGnbWrap .moGnb > li > a.on{color:violet;}
+.moGnbWrap .moGnb > li > a:before{content:'';position:absolute;right:20px;top:32px;transform:translateY(-50%);width:14px;height:2px;border-radius:1px;background-color:#444;}
+.moGnbWrap .moGnb > li > a:after{content:'';position:absolute;right:25px;top:25px;transform:translateX(-50%);width:2px;height:14px;border-radius:1px;background-color:#444;transition:0.3s;}
+.moGnbWrap .moGnb > li > a.on:after{transform:translateX(-50%) rotate(90deg);}
+
+.moGnbWrap .moGnb .depth1 > li > a.on{background:#eee;color:#000;font-weight:bold;}
+.moGnbWrap .moGnb .depth1 > li > a:before{content:'';position:absolute;right:20px;top:20px;transform:translateY(-50%);width:10px;height:2px;border-radius:1px;background-color:#aaa;}
+.moGnbWrap .moGnb .depth1 > li > a:after{content:'';position:absolute;right:23px;top:15px;transform:translateX(-50%);width:2px;height:10px;border-radius:1px;background-color:#aaa;transition:0.3s;}
+.moGnbWrap .moGnb .depth1 > li > a.on:after{transform:translateX(-50%) rotate(90deg);}
+
+.moGnbWrap .moGnb .depth2 > li > a.on{color:#000;text-decoration:underline;font-weight:bold;}
+
+/* 버튼 아이콘 */
+.moBtnOpen{position:absolute;top:0;right:0;width:60px;height:60px;background:#fff;color:#444;}
+.moBtnClose{position:absolute;top:0;right:0;width:60px;height:60px;background:#444;color:#fff;z-index:20;}
+
+.moBtnOpen .bar1{display:block;position:absolute;width:26px;height:2px;left:18px;top:18px;opacity:1;background:#444;border-radius:10px;}
+.moBtnOpen .bar2{display:block;position:absolute;width:26px;height:2px;left:18px;top:26px;opacity:1;background:#444;border-radius:10px;}
+.moBtnOpen .bar3{display:block;position:absolute;width:22px;height:2px;left:18px;top:34px;opacity:1;background:#444;border-radius:10px;}
+
+.moBtnClose:before{content:'';display:block;position:absolute;width:24px;height:2px;left:26%;top:47%;opacity:1;background-color:#fff;border-radius:10px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);}
+.moBtnClose:after{content:'';display:block;position:absolute;width:24px;height:2px;left:26%;top:47%;opacity:1;background-color:#fff;border-radius:10px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);}
 
 /****************** Content ******************/
 .sub_visual{width:100%;height:160px;background:steelblue;margin-top:80px;display:flex;align-items:center;justify-content:center;}
