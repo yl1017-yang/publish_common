@@ -3,7 +3,7 @@
 /****************** Layout ******************/
 html{font-size:16px;}
 body{min-width:1280px;min-height:100%;overflow-y:scroll;}
-.wrap{width:100%;}
+.wrap{width:100%;min-width:320px;}
 .inner{width:1100px;margin:0 auto;overflow:hidden;}
 
 /****************** Header & GNB ******************/
@@ -51,13 +51,23 @@ body{min-width:1280px;min-height:100%;overflow-y:scroll;}
 
 /****************** all Menu ******************/
 /* 모바일 전체메뉴 */
-/* body.fixed{overflow:hidden;} 모바일 오픈시 스크롤바 삭제 */
-.moGnbBg{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:0;}
+.moGnbBg{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,0.5);z-index:0;}
+.moGnbWrap{display:none;display:block;position:fixed;top:0;left:0;width:100%;height:100vh;z-index:50;}
 
-.moGnbWrap{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:50;}
-.moGnbWrap .scroll{position:absolute;top:0;right:-100px;width:50%;min-height:100vh;overflow-y:auto;background-color:rgba(255,255,255,1);box-shadow:0 -10px 10px rgb(0 0 0 / 10%);} /* right:애니메이션, width:전체화면 */
-.moGnbWrap .logo{position:absolute;top:0;left:0;width:150px;padding-top:20px;font-size:28px;font-weight:800;}
-.moGnbWrap .moUtil{position:fixed;top:0;right:0;width:50%;height:60px;z-index:40;background:#fff;transition: all 0.3s;}
+.moGnbWrap .moUtil{position:fixed;top:0;left:0;width:100%;height:60px;z-index:60;background:#fff;}
+.moGnbWrap .logo{position:absolute;top:0;left:0;width:150px;padding:20px 0 0 50px;font-size:28px;font-weight:800;}
+.moGnbWrap .scroll{position:absolute;top:0;right:0;width:50%;min-height:100vh;overflow-y:auto;background-color:rgba(255,255,255,1);box-shadow:0 -10px 10px rgb(0 0 0 / 10%);
+  -webkit-transform:translate3d(300px,0,0);
+  transform:translate3d(300px,0,0);
+  -webkit-transition:0.45s cubic-bezier(0.22,0.61,0.2,1);
+  transition:0.45s cubic-bezier(0.22,0.61,0.2,1);
+}
+.moGnbWrap .scroll.open{
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
+  -webkit-transition-delay:0.15s;
+  transition-delay:0.15s;
+}
 
 .moGnbWrap .moGnb .depth1, .moGnbWrap .moGnb .depth2{display:none;}
 .moGnbWrap .moGnbInner{position:absolute;top:0;left:0;width:100%;height:100%;text-align:center;display:table;}
@@ -83,7 +93,7 @@ body{min-width:1280px;min-height:100%;overflow-y:scroll;}
 
 /* 버튼 아이콘 */
 .moBtnOpen{position:absolute;top:0;right:0;width:60px;height:60px;background:#fff;color:#444;}
-.moBtnClose{display:block;position:absolute;top:0;right:0;width:60px;height:60px;background:#fff;color:#fff;z-index:20;}
+.moBtnClose{position:absolute;top:0;right:0;width:60px;height:60px;background:#fff;color:#fff;z-index:20;}
 
 .moBtnOpen .bar1{display:block;position:absolute;width:26px;height:2px;left:18px;top:18px;opacity:1;background:#444;border-radius:10px;}
 .moBtnOpen .bar2{display:block;position:absolute;width:26px;height:2px;left:18px;top:26px;opacity:1;background:#444;border-radius:10px;}
